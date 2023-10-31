@@ -31,7 +31,7 @@ function App() {
   /////////// DELETE -Eliminar-fnDelete/////
   const [idActual, setIdActual]= useState("");
   const fnDelete = (xId) => {}
-
+    
   
  
   return (
