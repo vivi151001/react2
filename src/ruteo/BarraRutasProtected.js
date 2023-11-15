@@ -59,15 +59,18 @@ const BarraRutasProtected = () => {
               
           <div id="menu">
             <ul>
-              <li><Link to="/sistema-crud/applista">Alumnos(App-Lista)</Link> </li>
-              <li><Link to="/sistema-crud/prof">Profesores</Link> </li>
-              <li><Link to="/sistema-crud/depor">Deportes</Link> </li>
               <li><Link to="/sistema-crud/carre">Carreras</Link> </li>
+              <li><Link to="/sistema-crud/depor">Deportes</Link> </li>
+              <li><Link to="/sistema-crud/prof">Egresados</Link> </li>
+              <li><Link to="/sistema-crud/applista">Alumnos(App-Lista)</Link> </li>
+              
+              
+              
 
-              <li><Link to="/sistema-file/fotos">Galeria de Fotos</Link> </li>
-              <li><Link to="/sistema-file/docword">Doc.Pdf</Link> </li>
               <li><Link to="/sistema-file/videos">Videos</Link> </li>
-              <li><Link to="/sistema-file/docword">Doc. word</Link> </li>
+              <li><Link to="/sistema-file/fotos">Fotos</Link> </li>
+              <li><Link to="/sistema-file/docword">PDF</Link> </li>
+              <li><Link to="/sistema-file/docword">WORD</Link> </li>
               
             </ul>
           </div>

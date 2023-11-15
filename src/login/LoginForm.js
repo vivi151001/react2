@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useAuth } from '../ruteo/AuthContext'; // (7). Importando contexto
 import { useNavigate } from 'react-router-dom';
-
+import { ToastContainer, toast } from "react-toastify";
 function LoginForm() {
   
   const { signIn } = useAuth();                 // (7). Usando el contexto
@@ -32,25 +32,51 @@ function LoginForm() {
   }
 
   return (
-    <div id='public'>
-      <h2>Iniciar Sesión</h2>
-      <form onSubmit={handleSignIn}>
-        <div>
-          <label>Email:</label>
-          <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+
+    <div className='container text-center' id='none'>
+      <div className='card bs-danger p-3 mt-3'>
+        
+        <ToastContainer/>
+
+        <div className='col-md-12 p-2'>
+          <div className='card mb-4'>
+            <h2>Iniciar Sesión</h2>
+          </div>
         </div>
-        <div>
-          <label>Contraseña:</label>
-          <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+
+        <form className='card card-body' onSubmit={handleSignIn}>
+
+        <div className='form-group input-group'>
+          <div className='input-group-text bd-light'>
+            <i className='material-icons'>group_add</i>
+          </div>
+          <input className='form-control float-start' placeholder='Email'  
+            type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
         </div>
-        {error && <p style={{ color: 'red' }}>{error}</p>}
-        <button type="submit">Iniciar Sesión</button>
-      </form>
+        
+        <div className='form-group input-group'>
+          <div className='input-group-text bd-light'>
+            <i className='material-icons'>star_half</i>
+          </div>
+          <input className='form-control float-start' placeholder='Contraseña'  
+            type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+        </div>
+
+          
+        <button className='btn btn-primary btn-block' type="submit">
+        Iniciar Sesión
+        </button>
+
+        </form>
+
+      </div>
     </div>
+
   );
 }
 
 export default LoginForm;
+
 
 
 /*

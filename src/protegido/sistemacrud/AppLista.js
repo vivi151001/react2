@@ -5,7 +5,7 @@ import { db } from '../../conexion/firebase';
 
 import "react-toastify/dist/ReactToastify.css";           // Para estilos
 import { ToastContainer, toast } from "react-toastify";   // Para contenedor y diseño
-
+import 'bootswatch/dist/united/bootstrap.min.css';
 const AppLista = (props) => {
 
   ////// Lectura fnRead ///////////
@@ -24,8 +24,8 @@ const AppLista = (props) => {
   }
   //console.log(docBD); 
 
-  fnRead(); //Prueba sin useEffect
-  //useEffect(()=>{fnRead();}, [props.idActual]);
+  //fnRead(); //Prueba sin useEffect
+  useEffect(()=>{fnRead();}, [props.idActual]);
 
   ////// Delete ////////////////////
   const [idActual, setIdActual] = useState("");

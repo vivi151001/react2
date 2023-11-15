@@ -12,6 +12,8 @@ import Informacion from '../public/Informacion';
 import Noticias from '../public/Noticias';
 import LoginForm from '../login/LoginForm';
 import RegisterForm from '../login/RegisterForm';
+import Contacto from '../public/Contacto';
+
 
 const BarraRutasPublic = () => {
     const { user } = useAuth();
@@ -40,6 +42,7 @@ const BarraRutasPublic = () => {
               <li><Link to="/">Portada(Dashboard)</Link> </li>
               <li><Link to="/Informacion">Informacion</Link> </li>
               <li><Link to="/Noticias">Noticias</Link> </li>
+              <li><Link to="/Contacto">Contacto</Link> </li>
               
 
             </ul>
@@ -53,6 +56,7 @@ const BarraRutasPublic = () => {
         <Route path="/home" element={<Home />} />
         <Route path="/Informacion" element={<Informacion />} />
         <Route path="/Noticias" element={<Noticias />} />
+        <Route path="/Contacto" element={<Contacto />} />
         </Routes> 
       </div>
     )
